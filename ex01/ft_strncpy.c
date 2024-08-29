@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 10:04:37 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/29 12:21:25 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 12:21:37 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	{
 		dest[i] = src[i];
 		i++;
-		src++;
 	}
 	return (dest);
 }

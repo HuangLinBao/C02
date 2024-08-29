@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 10:04:37 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/28 11:06:53 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 10:58:54 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //TODO: Handle the i > dest_size
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int		i;
+	unsigned int		i;
 
 	i = 0;
 	while (i < n && *src != '\0' )

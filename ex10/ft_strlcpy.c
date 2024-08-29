@@ -6,11 +6,12 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 17:20:21 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/29 08:59:35 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 12:16:10 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 unsigned int	ft_strlen(char *str)
 {
@@ -34,7 +35,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	else if (size < ft_strlen(src))
 	{
 		i = 0;
-		while (i < size)
+		while (i < size - 1)
 		{
 			dest[i] = src[i];
 			i++;
@@ -54,13 +55,15 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (ft_strlen(src));
 }
 
-// int	main(void)
-// {
-// 	char src[] = "Hi";
-// 	char dest[5];
-// 	char *s = &src[0];
-// 	char *d = &dest[0];
-// 	int len = ft_strlcpy(d, s, 0);
-// 	printf("size is: %d\nDest is %s\n", len, dest);
-// 	return (0);
-// }
+int	main(void)
+{
+	unsigned int	len1;
+	unsigned int	len2;
+	char			dest[10];
+
+	len1 = ft_strlcpy(&dest[0], "Hello, World!", 10);
+	printf("size is: %d\nDest is %s\n", len1, dest);
+	len2 = strlcpy(&dest[0], "Hello, World!", 10);
+	printf("size is: %d\nDest is %s\n", len2, dest);
+	return (0);
+}

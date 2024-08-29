@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 16:28:10 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/28 17:02:56 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 11:55:12 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,22 @@ char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
-	i = 0;
-	str[i] = ft_capitalize(str[i]);
+	if (ft_is_letter(str[0]))
+		str[0] = ft_capitalize(str[0]);
+	i = 1;
 	while (str[i] != '\0')
 	{
-		if (!(ft_is_letter(str[i])) && !(ft_is_numeric(str[i])))
+		if (!(ft_is_letter(str[i - 1])) && !(ft_is_numeric(str[i - 1])))
 		{
-			if (ft_is_letter(str[i + 1]))
-				str[i + 1] = ft_capitalize(str[i + 1]);
+			if (ft_is_letter(str[i]))
+				str[i] = ft_capitalize(str[i]);
+		}
+		else
+		{
+			if (str[i] >= 'A' && str[i] <= 'Z')
+			{
+				str[i] = str[i] + 32;
+			}
 		}
 		i++;
 	}
@@ -58,7 +66,7 @@ char	*ft_strcapitalize(char *str)
 
 // int	main(void)
 // {
-// 	char str[] = "salut, comment tu vas ? 42mots";
+// 	char str[] = "HELLO";
 // 	char *s = &str[0];
 // 	s = ft_strcapitalize(s);
 // 	printf("%s\n", str);

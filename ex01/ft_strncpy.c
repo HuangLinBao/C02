@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 10:04:37 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/29 13:11:49 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 13:15:41 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	if (dest[i] != '\0')
+	if (dest[i] != '\0' && src[i] == '\0')
 		dest[i] = '\0';
 	return (dest);
 }

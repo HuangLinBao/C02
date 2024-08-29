@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 10:04:37 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/29 12:27:31 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 12:58:21 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-	}
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -38,7 +35,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 // 	src = "Hello";
 // 	dest = "World1";
-// 	printf("%s\n", ft_strncpy(dest, "Hello", 7));
-// 	printf("%s\n", strncpy(dest, "Hello", 7));
+// 	printf("%s\n", ft_strncpy(dest, "Hello", 5));
+// 	printf("%s\n", strncpy(dest, "Hello", 3));
 // 	return (0);
 // }

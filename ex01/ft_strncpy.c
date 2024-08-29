@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 10:04:37 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/29 11:18:05 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 12:21:25 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int		i;
 
 	i = 0;
-	while (i < n && *src != '\0' )
+	while (i < n && src[i] != '\0' )
 	{
 		dest[i] = src[i];
 		i++;
@@ -30,12 +30,6 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 // int	main(void)
 // {
-// 	char	str1[] = "Hello World";
-// 	char	str2[] = "Oi Mate";
-// 	char	*src = &str1[0];
-// 	char	*dest = &str2[0];
-
-// 	dest = ft_strncpy(dest, src, 2);
-// 	printf("%s\n", str2);
+// 	printf("%s\n"ft_strncpy("World1", "Hello"))
 // 	return (0);
 // }

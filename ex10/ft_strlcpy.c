@@ -6,7 +6,7 @@
 /*   By: tsabri <tsabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 17:20:21 by tsabri            #+#    #+#             */
-/*   Updated: 2024/08/29 12:16:10 by tsabri           ###   ########.fr       */
+/*   Updated: 2024/08/29 12:17:13 by tsabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,15 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (ft_strlen(src));
 }
 
-int	main(void)
-{
-	unsigned int	len1;
-	unsigned int	len2;
-	char			dest[10];
+// int	main(void)
+// {
+// 	unsigned int	len1;
+// 	unsigned int	len2;
+// 	char			dest[10];
 
-	len1 = ft_strlcpy(&dest[0], "Hello, World!", 10);
-	printf("size is: %d\nDest is %s\n", len1, dest);
-	len2 = strlcpy(&dest[0], "Hello, World!", 10);
-	printf("size is: %d\nDest is %s\n", len2, dest);
-	return (0);
-}
+// 	len1 = ft_strlcpy(&dest[0], "Hello, World!", 10);
+// 	printf("size is: %d\nDest is %s\n", len1, dest);
+// 	len2 = strlcpy(&dest[0], "Hello, World!", 10);
+// 	printf("size is: %d\nDest is %s\n", len2, dest);
+// 	return (0);
+// }
